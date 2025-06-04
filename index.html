@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>あーちゃんとひかるの秘密のサイト</title>
+</head>
+<body>
+  <h2>パスワードを入力してください（記念日4桁）</h2>
+  <input type="password" id="passwordInput" placeholder="例: 0130">
+  <button onclick="checkPassword()">送信</button>
+
+  <div id="linkSection" style="display:none; margin-top:20px;">
+    <h3>アルバムリンク</h3>
+    <a href="https://drive.google.com/drive/folders/1i8sfXT_fXgITjQy-bPjaa3eYWUeB9djr" target="_blank">アルバムを開く</a>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const correctPassword = "0130";
+
+      if (input === correctPassword) {
+        document.getElementById("linkSection").style.display = "block";
+      } else {
+        alert("パスワードが違います");
+      }
+    }
+  </script>
+</body>
+</html>
